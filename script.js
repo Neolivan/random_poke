@@ -15,7 +15,7 @@ async function getPkemon(){
     if(index > 905){
         if(index < 10001){
             if(index < 1000){
-                index = 905
+                index = Math.floor(Math.random() * 904) + 1
             }else{
                 index = 10001
             }
