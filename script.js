@@ -12,20 +12,24 @@ async function getPokeList(){
 
 async function getPkemon(){
     let index = Math.floor(Math.random() * 1151) + 1;
+    let shineLucky =  Math.floor(Math.random() * 11)
     if(index > 905){
         if(index < 10001){
             if(index < 1000){
                 index = Math.floor(Math.random() * 904) + 1
             }else{
-                index = 10001
+                index = 10020
             }
         }
     }
-    let shineLucky =  Math.floor(Math.random() * 11)
     let shine = shineLucky == 1? true : false
     await fetch(`https://pokeapi.co/api/v2/pokemon/${index}/`).then((T) => T.json())
     .then((resp) => {
         let pokeImg = resp.sprites.front_default
+        console.log(index)
+        if(!pokemonList[index -1].name){
+            return false
+        }
         if(shine){
             document.getElementById('poke-name').innerHTML = `⭐ ${pokemonList[index -1].name} ⭐`;
         }else{
