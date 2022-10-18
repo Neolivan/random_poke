@@ -32,7 +32,6 @@ async function getPkemon(){
             document.getElementById('poke-name').innerHTML = pokemonList[index -1].name;
         }
         if(pokeImg){
-            console.log(shine)
             if(shine){
                 document.getElementById('poke-img').setAttribute('src', resp.sprites.front_shiny)
             }else{
@@ -52,7 +51,6 @@ async function _init_(){
 }
 
 async function refresh(){
-    console.log('refresh')
     await getPkemon()
 }
 
