@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Silkscreen:wght@400;700&display=swap');
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/pokemon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main{
+    background-color: rgba(111, 111, 119, 0.589);
+    border-radius: 10px;
+    color: #FFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+}
+
+.poke-img{
+    width:  250px;
+}
+
+button{
+    margin-top: 24px;
+    padding: 10px 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(245, 32, 32);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: inset;
+    box-shadow: 3px 4px #888888;
+    font-family: 'Silkscreen', cursive;
+}
+button:hover{
+    background-color: rgb(241, 106, 106);
+}
+button:active{
+    box-shadow: none;
+}
